@@ -17,24 +17,32 @@
         }
         .text-container {
             font-size: 2rem;
-            display: inline-block;
-            overflow: hidden;
-            height: 5rem; /* Adjusted height for both lines */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 5rem; /* Adjust height to fit both lines */
         }
         .static-text {
             display: block;
         }
-        .dynamic-text {
-            display: inline-block;
-            color: #7d97f4; /* Light blue */
-            font-weight: bold;
-            height: 2.5rem;
+        .dynamic-container {
+            height: 2.5rem; /* Ensures consistent height */
             overflow: hidden;
             position: relative;
         }
-        .dynamic-text span {
-            display: block;
+        .dynamic-text {
+            display: flex;
+            flex-direction: column;
+            color: #7d97f4; /* Light blue */
+            font-weight: bold;
+            position: absolute;
             animation: slideText 10s infinite;
+        }
+        .dynamic-text span {
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         @keyframes slideText {
@@ -50,15 +58,16 @@
 <body>
     <div class="text-container">
         <span class="static-text">I am a student at COEP Pune</span> 
-        <br> 
         <span class="static-text">and a</span>  
-        <span class="dynamic-text">
-            <span>Programmer</span>
-            <span>Full Stack Developer</span>
-            <span>Blockchain Developer</span>
-            <span>Open Source Lover</span>
-            <span>GSoC'23 Contributor</span>
-        </span>
+        <div class="dynamic-container">
+            <div class="dynamic-text">
+                <span>Programmer</span>
+                <span>Full Stack Developer</span>
+                <span>Blockchain Developer</span>
+                <span>Open Source Lover</span>
+                <span>GSoC'23 Contributor</span>
+            </div>
+        </div>
     </div>
 </body>
 </html>
