@@ -23,11 +23,18 @@
             max-width: 90%;
         }
 
+        .inline-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            height: 2.8rem;
+        }
+
         .dynamic-container {
             height: 2.8rem;
             overflow: hidden;
-            display: inline-block;
             position: relative;
+            display: inline-block;
         }
 
         .dynamic-text {
@@ -44,7 +51,6 @@
             justify-content: center;
         }
 
-        /* Perfect loop calculation: 100% / (number of items - 1) */
         @keyframes slideText {
             0% { transform: translateY(0); }
             19% { transform: translateY(0); }
@@ -59,7 +65,6 @@
             100% { transform: translateY(-100%); }
         }
 
-        /* Clone first item at bottom */
         .dynamic-text::after {
             content: "Programmer";
             position: absolute;
@@ -76,6 +81,7 @@
 
         @media (max-width: 480px) {
             .text-container { font-size: 1.2rem; }
+            .inline-container { height: 2.2rem; }
             .dynamic-container, 
             .dynamic-text span { height: 2.2rem; }
         }
@@ -83,15 +89,17 @@
 </head>
 <body>
     <div class="text-container">
-        <span class="static-text">I am a student at COEP Pune</span> 
-        <span class="static-text">and a</span>  
-        <div class="dynamic-container">
-            <div class="dynamic-text">
-                <span>Programmer</span>
-                <span>Full Stack Developer</span>
-                <span>Blockchain Developer</span>
-                <span>Open Source Contributor</span>
-                <span>GSoC'23 Contributor</span>
+        <div class="static-text">I am a student at COEP Pune</div>
+        <div class="inline-container">
+            <span>and a</span>
+            <div class="dynamic-container">
+                <div class="dynamic-text">
+                    <span>Programmer</span>
+                    <span>Full Stack Developer</span>
+                    <span>Blockchain Developer</span>
+                    <span>Open Source Contributor</span>
+                    <span>GSoC'23 Contributor</span>
+                </div>
             </div>
         </div>
     </div>
