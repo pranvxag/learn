@@ -5,9 +5,9 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    color: white;
     font-family: 'Poppins', sans-serif;
     text-align: center;
+    color: white; /* Ensure default text is white */
 }
 
 .text-container {
@@ -15,25 +15,22 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 10rem; /* Adjust height to fit both lines */
+    height: 6rem; /* Adjust height to fit both lines */
 }
 
 .static-text {
     display: block;
-    color: black; /* Ensure static text is black */
 }
 
 .dynamic-container {
     height: 2.5rem; /* Ensures consistent height */
     overflow: hidden;
     position: relative;
-    color: blue; /* Ensure dynamic text is blue */
 }
 
 .dynamic-text {
     display: flex;
     flex-direction: column;
-    color: #7d97f4; /* Light blue */
     font-weight: bold;
     position: absolute;
     animation: slideText 10s infinite;
@@ -44,6 +41,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #7d97f4; /* Light blue */
 }
 
 @keyframes slideText {
@@ -54,4 +52,3 @@ body {
     80% { transform: translateY(-400%); }
     100% { transform: translateY(0); }
 }
-
