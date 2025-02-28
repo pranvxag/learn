@@ -17,13 +17,12 @@
         }
         .text-container {
             font-size: 2rem;
-            position: relative;
             display: inline-block;
             overflow: hidden;
-            height: 2.5rem; /* Fixed height to avoid movement */
+            height: 5rem; /* Adjusted height for both lines */
         }
         .static-text {
-            display: inline;
+            display: block;
         }
         .dynamic-text {
             display: inline-block;
@@ -50,7 +49,9 @@
 </head>
 <body>
     <div class="text-container">
-        <span class="static-text">I am a student at COEP Pune <br> <br> and a  </span>
+        <span class="static-text">I am a student at COEP Pune</span> 
+        <br> 
+        <span class="static-text">and a</span>  
         <span class="dynamic-text">
             <span>Programmer</span>
             <span>Full Stack Developer</span>
