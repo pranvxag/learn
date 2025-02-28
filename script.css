@@ -1,0 +1,6 @@
+.dynamic-text::after {
+    content: attr(data-first);
+    position: absolute;
+    top: 500%; /* Matches total translateY distance */
+    /* ... */
+}
